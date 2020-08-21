@@ -41,4 +41,3 @@ spec:
     app: twitter-feed
   type: ClusterIP
 ---
-
