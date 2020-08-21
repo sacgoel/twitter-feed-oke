@@ -54,3 +54,21 @@ spec:
     color: blue
   type: ClusterIP
 ---
+
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: twitter-feed-test
+  labels:
+    app: twitter-feed
+    commit: ${WERCKER_GIT_COMMIT}
+spec:
+  ports:
+  - port: 30000
+    targetPort: 8080
+  selector:
+    app: twitter-feed
+    color: green
+  type: ClusterIP
+---
